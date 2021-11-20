@@ -12,7 +12,7 @@
  import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
- const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
     // <Login/>
        <NavigationContainer>
          
-        { <Stack.Navigator>
+        { <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Login"
             component={Login}

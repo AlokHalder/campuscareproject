@@ -88,9 +88,9 @@ function Login({navigation}) {
               <Text style={styles.forgot_button}>Forgot Password?</Text>
             </TouchableOpacity>
       
-            <TouchableOpacity style={styles.loginBtn}>
-              <Button style={styles.loginText} onPress={()=>navigation.navigate('Dashboard',{name:'Alok Pcs Global'})} title="LOGIN" 
-              />
+            <TouchableOpacity style={styles.loginBtn} 
+            onPress={()=>navigation.navigate('Dashboard',{name:'Alok Pcs Global'})}>
+             <Text> Login</Text>
             </TouchableOpacity>
           </View>
         );

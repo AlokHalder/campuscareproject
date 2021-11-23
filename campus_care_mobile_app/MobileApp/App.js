@@ -1,16 +1,12 @@
 //App
 
+import * as React from 'react';
+import Login from './Components/Login';
+import DashBoard from './Components/DashBoard';
+import {StyleSheet} from 'react-native';
 
-  import * as React from 'react';
-  import Login from "./Components/Login";
-  import Dashboard from "./Components/DashBoard";
-  import {
-    StyleSheet
-  } from 'react-native';
-
- import { NavigationContainer } from '@react-navigation/native';
- import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,30 +15,22 @@ const App = () => {
     // <SafeAreaView style={styles.container}>
     //   <ScrollView style={styles.scrollView}>
     // <DeContext.Provider>
-   
+
     // <Login/>
-       <NavigationContainer>
-         
-        { <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen
-            name="Login"
-            component={Login}
-          />
-          
-          <Stack.Screen
-            name="Dashboard"
-            component={Dashboard}
-          />
-        </Stack.Navigator> }
-      </NavigationContainer> 
-   
+    <NavigationContainer>
+      {
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+
+          <Stack.Screen name="DashBoard" component={DashBoard} />
+        </Stack.Navigator>
+      }
+    </NavigationContainer>
+
     // </DeContext.Provider>
     //   </ScrollView>
     // </SafeAreaView>
   );
-
 };
-
-
 
 export default App;

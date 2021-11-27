@@ -42,6 +42,7 @@ function Login({ navigation }) {
 
     loginText: {
       fontSize: 20,
+      color:"#008080"
     },
 
     forgot_button: {
@@ -49,9 +50,18 @@ function Login({ navigation }) {
       marginBottom: 30,
 
     },
+    SignUpArea:{
+      marginTop:14,
+      display:'flex',
+      flexDirection:'row',
+      justifyContent:'center',
+      alignContent:'center',
+      alignItems:'center',
+      fontSize:14
+    },
     SignBtn:{
-      marginTop: 15,
-      marginLeft: 5,
+      
+
     },
     signUpBtnText: {
     
@@ -113,8 +123,8 @@ function Login({ navigation }) {
         style={styles.loginBtn}>
         <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
-      <View>
-        <Text> Don't have an account?
+      <View style={ styles.SignUpArea }>
+        <Text> Don't have an account?  </Text>
           <TouchableOpacity
           style={styles.SignBtn}
           >
@@ -122,7 +132,7 @@ function Login({ navigation }) {
                 SignUp
             </Text>
           </TouchableOpacity>
-        </Text>
+      
 
       </View>
     </View>

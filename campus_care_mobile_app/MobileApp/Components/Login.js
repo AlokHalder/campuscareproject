@@ -49,9 +49,13 @@ function Login({ navigation }) {
       marginBottom: 30,
 
     },
-    signUpBtn: {
-      marginTop: 2,
-      marginLeft: 5
+    SignBtn:{
+      marginTop: 15,
+      marginLeft: 5,
+    },
+    signUpBtnText: {
+    
+      color:"#008080"
 
     },
 
@@ -112,9 +116,10 @@ function Login({ navigation }) {
       <View>
         <Text> Don't have an account?
           <TouchableOpacity
+          style={styles.SignBtn}
           >
-            <Text style={styles.signUpBtn}>
-              Register Now
+            <Text style={styles.signUpBtnText}>
+                SignUp
             </Text>
           </TouchableOpacity>
         </Text>

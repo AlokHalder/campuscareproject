@@ -46,7 +46,7 @@ const DetailsScreen = () => {
           style={{
             fontSize: 16,
             textAlign: 'center',
-            color: 'grey',
+            color: 'teal',
           }}>
          PERENNATION COMPUTER SOLUTIONS GLOBAL PRIVATE LIMITED
         </Text>

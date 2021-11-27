@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function Login({navigation}) {
+function Login({ navigation }) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -24,9 +24,9 @@ function Login({navigation}) {
     },
 
     inputView: {
-      backgroundColor: '#FFC0CB',
-      borderRadius: 30,
-      width: '70%',
+      backgroundColor: '#F0F0EB',
+      // borderRadius: 30,
+      width: '100%',
       height: 45,
       marginBottom: 20,
 
@@ -37,22 +37,32 @@ function Login({navigation}) {
       height: 50,
       flex: 1,
       padding: 10,
-      marginLeft: 20,
+
+    },
+
+    loginText: {
+      fontSize: 20,
     },
 
     forgot_button: {
       height: 30,
       marginBottom: 30,
+
+    },
+    signUpBtn: {
+      marginTop: 2,
+      marginLeft: 5
+
     },
 
     loginBtn: {
-      width: '80%',
+      width: '100%',
       borderRadius: 25,
       height: 50,
       alignItems: 'center',
       justifyContent: 'center',
       marginTop: 40,
-      backgroundColor: '#FF1493',
+      backgroundColor: '#C9C9C9',
     },
   });
 
@@ -65,7 +75,7 @@ function Login({navigation}) {
         style={styles.image}
         width={50}
         height={50}
-        source={require('../assets/Logo_mockup.jpg')}
+        source={require('../assets/BRAIT.png')}
       />
 
       <StatusBar style="auto" />
@@ -94,11 +104,22 @@ function Login({navigation}) {
 
       <TouchableOpacity
         onPress={() =>
-          navigation.navigate('DashBoard', {name: 'Alok Pcs Global'})
+          navigation.navigate('DashBoard', { name: 'Alok Pcs Global' })
         }
         style={styles.loginBtn}>
-        <Text>Login</Text>
+        <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
+      <View>
+        <Text> Don't have an account?
+          <TouchableOpacity
+          >
+            <Text style={styles.signUpBtn}>
+              Register Now
+            </Text>
+          </TouchableOpacity>
+        </Text>
+
+      </View>
     </View>
   );
 }

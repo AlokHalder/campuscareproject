@@ -1,25 +1,37 @@
 // React Native Bottom Navigation
 // https://aboutreact.com/react-native-bottom-navigation/
 import * as React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import { StyleSheet, View, Text, Image, SafeAreaView } from 'react-native';
 
 const DetailsScreen = () => {
+  const styles = StyleSheet.create({
+    image: {
+      marginBottom: 40,
+    },
+  });
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <View style={{flex: 1, padding: 16}}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
           }}>
+          <Image
+            style={styles.image}
+            width={120}
+            height={120}
+            source={require('../assets/BRAIT.png')}
+          />
           <Text
             style={{
-              fontSize: 25,
+              fontSize: 18,
               textAlign: 'center',
-              marginBottom: 16,
+              fontWeight:'bold',
+              color: 'grey',
             }}>
-            implemented with Text and Button as children
+            Dr. B.R. Ambedkar Institute of Technology
           </Text>
         </View>
         <Text
@@ -28,7 +40,7 @@ const DetailsScreen = () => {
             textAlign: 'center',
             color: 'grey',
           }}>
-          React Native Bottom Navigation
+         Developed By
         </Text>
         <Text
           style={{
@@ -36,7 +48,7 @@ const DetailsScreen = () => {
             textAlign: 'center',
             color: 'grey',
           }}>
-          www.aboutreact.com
+         PERENNATION COMPUTER SOLUTIONS GLOBAL PRIVATE LIMITED
         </Text>
       </View>
     </SafeAreaView>
